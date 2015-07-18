@@ -37,7 +37,7 @@ def scrapePage(episode, name, page, html=None):
         return
     if not html:
         html = requests.get(rootUrl+show+"/"+episode+"/"+page).content
-    img = html[html.find('<img src="mangas/Dragon Ball Super/')+10:]
+    img = html[html.find('<img src="mangas/')+10:]
     img = img[:img.find('.jpg" alt="')+4]
     img = rootUrl + img
     print path
